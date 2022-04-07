@@ -20,8 +20,14 @@ function adicionar() {
 function mostrarLista() {
     ul.innerHTML = '';
     lista.forEach(item => {
+        let checkbox = document.createElement('input');
+        checkbox.type = "checkbox";
+        checkbox.name = "checkbox";
+        checkbox.id = "checkbox";
+
         let li = document.createElement('li');
         li.innerHTML = item;
+        ul.appendChild(checkbox);
         ul.appendChild(li);
         
     });
