@@ -5,12 +5,24 @@ const btnLimpar = document.getElementById('botao-limpar');
 const ul = document.getElementById('lista');
 
 let lista = [];
+let listaJSON = localStorage.getItem('lista');
+
+if(listaJSON){
+    lista = JSON.parse(listaJSON);
+    mostrarLista();
+}
+
+function salvarLista() {
+    let listaJSON = JSON.stringify(lista);
+    localStorage.setItem('lista', listaJSON);
+}
 
 function adicionar() {
     if(inputItem.value){
         lista.push(inputItem.value);
         inputItem.value = '';
         mostrarLista();
+        salvarLista();
     }else{
         alert('Insira seu item');
     }
