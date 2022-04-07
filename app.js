@@ -25,9 +25,18 @@ function mostrarLista() {
         checkbox.name = "checkbox";
         checkbox.id = "checkbox";
 
+        let label = document.createElement('label');
+        label.htmlFor = "item-lista"
+        label.innerHTML = item;
+
         let li = document.createElement('li');
-        li.innerHTML = item;
-        ul.appendChild(checkbox);
+
+        //let btnExcluiItem = document.createElement('button');
+        //btnExcluiItem.innerHTML = 'X'
+
+       // li.appendChild(btnExcluiItem);
+        li.appendChild(checkbox);
+        li.appendChild(label);
         ul.appendChild(li);
         
     });
