@@ -49,14 +49,16 @@ function removeItem(e) {
 
 function mostrarLista() {
     ul.innerHTML = '';
-    lista.forEach(item => {
+    lista.forEach((item, index) => {
         let checkbox = document.createElement('input');
         checkbox.type = "checkbox";
         checkbox.name = "checkbox";
-        checkbox.id = "checkbox";
+        checkbox.id = "checkbox" + index;
+        checkbox.addEventListener('change', riscaItem);
 
         let label = document.createElement('label');
         label.htmlFor = "item-lista";
+        label.id = "item-lista" + index;
         label.innerHTML = item;
 
         let btnExcluiItem = document.createElement('button');
@@ -71,12 +73,25 @@ function mostrarLista() {
         ul.appendChild(li);
         
     });
+
 }
+
+function riscaItem(e) {
+    let checkbox = e.target
+    let label = checkbox.parentElement.getElementsByTagName('label')[0];
+    if(checkbox.checked) {
+        label.style.textDecoration = 'line-through';
+    }else{
+        label.style.textDecoration = 'none';
+    }
+}
+
 
 function limparLista() {
     ul.innerHTML = '';
     lista = [];
     console.log(lista);
+    localStorage.clear();
     
 
 }
