@@ -19,10 +19,17 @@ function salvarLista() {
 
 function adicionar() {
     if(inputItem.value){
-        lista.push({nome: inputItem.value, preco: 0 , checked: false});
-        inputItem.value = '';
-        mostrarLista();
-        salvarLista();
+        if(!lista.find(element => element.nome == inputItem.value)){
+            lista.push({nome: inputItem.value, preco: 0 , checked: false});
+            inputItem.value = '';
+            mostrarLista();
+            salvarLista();     
+        }else{
+            alert('Já existe item na lista.');
+
+        }
+        
+        
     }else{
         alert('Insira seu item');
     }

@@ -6,10 +6,15 @@ body {
 header h1 {
     text-align: center;
 }
-
-.container {
+.campo-item {
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
+}
+
+.campoListaPreco {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .imgCarrinho {
