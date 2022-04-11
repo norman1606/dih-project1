@@ -22,7 +22,7 @@ header h1 {
     font-weight: 500;
 }
 
-#botao-add, #botao-limpar {
+#botao-add, #botao-limpar, #botao-excluir-marcado {
     padding: 8px 15px 8px 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -31,7 +31,7 @@ header h1 {
     
 }
 
-#botao-add:hover, #botao-limpar:hover {
+#botao-add:hover, #botao-limpar:hover, #botao-excluir-marcado:hover {
     background-color: #2f2f35;
     color: white;
     transform: scale(1.12);
