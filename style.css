@@ -1,0 +1,115 @@
+
+body {
+    background-color: #57b35d;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    padding-bottom: 200px;
+}
+
+header h1 {
+    text-align: center;
+}
+.campo-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    gap: 10px;
+}
+
+.campo-item label {
+    font-size: 27px;
+    font-weight: 500;
+}
+
+#botao-add, #botao-limpar, #botao-excluir-marcado {
+    padding: 8px 15px 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .4s;
+    
+}
+
+#botao-add:hover, #botao-limpar:hover, #botao-excluir-marcado:hover {
+    background-color: #2f2f35;
+    color: white;
+    transform: scale(1.12);
+}
+
+.campoListaPreco {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.campo-lista {
+    background-color: aliceblue;
+    padding: 50px 350px 50px 50px;
+    border-radius: 5px;
+
+}
+
+#lista {
+    color: #2f2f35;
+    list-style: none;
+    font-size: 20px;
+}
+
+#lista li {
+    display: flex;
+    gap: 5px;
+    padding-bottom: 7px;
+}
+
+#lista li input{
+    cursor: pointer;
+}
+
+#lista li button {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.precoTotal {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.precoTotal span {
+    font-weight: 700;
+}
+
+
+
+.imgCarrinho img {
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+}
+
+
+@media (max-width: 900px){
+
+    .campo-item {
+        flex-direction: column;
+    }
+
+    .campoListaPreco {
+        flex-direction: column;
+        
+    }
+
+    .campo-lista{
+        padding: 0;
+    }
+
+    .imgCarrinho img {
+        display: block;
+        position: unset;
+        margin: 0 auto;
+    }
+
+
+
+}

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon-cart.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Lista de Compras</h1>
+    </header>
+    <section class="container">
+        <div class="campo-item">
+            <label for="item">Insira seu item:</label>
+            <input type="text" name="item" id="item" placeholder="Ex: Batata...">
+            <button id="botao-add">Adicionar</button>
+            <button id="botao-limpar">Limpar lista</button>
+            <button id="botao-excluir-marcado">Remover Marcados</button>
+        </div>
+
+        <div class="campoListaPreco">
+        
+            <div class="campo-lista">
+                <ul id="lista"></ul>
+            </div>
+
+            <div class="precoTotal">
+                <p>O valor total:  <span id="valorProduto"></span></p>
+            </div>
+        
+        </div>
+        
+        <div class="imgCarrinho">
+        <img src="img/shopping-cart.png" alt="carrinho compras">
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
