@@ -73,7 +73,7 @@ function mostrarLista() {
         riscaItem(checkbox, item, label);
 
         let btnExcluiItem = document.createElement('button');
-        btnExcluiItem.innerHTML = 'X';
+        btnExcluiItem.innerHTML = 'x';
         btnExcluiItem.onclick = removeItem;
 
         let li = document.createElement('li');
@@ -128,7 +128,7 @@ function somarPreco() {
     function mostrarPreco() {
         let span = document.getElementById('valorProduto');
         let precoTotal = somarPreco();
-        span.innerText = precoTotal;
+        span.innerText = 'R$ ' + precoTotal.toFixed(2);
     }
 
 
@@ -146,7 +146,7 @@ function pedirPreco() {
     let valor = parseFloat(prompt('Digite o valor do produto:'));
 
     if(isNaN(valor)) {
-        return 0;
+        return  0;
 
     }
     return valor;

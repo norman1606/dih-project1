@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de compras</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/favicon-cart.png" type="image/x-icon">
 </head>
@@ -16,8 +19,8 @@
     </header>
     <section class="container">
         <div class="campo-item">
-            <label for="item">Insira seu item</label>
-            <input type="text" name="item" id="item">
+            <label for="item">Insira seu item:</label>
+            <input type="text" name="item" id="item" placeholder="Ex: Batata...">
             <button id="botao-add">Adicionar</button>
             <button id="botao-limpar">Limpar</button>
         </div>
@@ -29,7 +32,7 @@
             </div>
 
             <div class="precoTotal">
-                <p>O valor total é:<br>R$ <span id="valorProduto"></span></p>
+                <p>O valor total:  <span id="valorProduto"></span></p>
             </div>
         
         </div>
