@@ -2,6 +2,7 @@
 const inputItem = document.getElementById('item');
 const btnAdd = document.getElementById('botao-add');
 const btnLimpar = document.getElementById('botao-limpar');
+const btnExcluiMarcado = document.getElementById('botao-excluir-marcado');
 const ul = document.getElementById('lista');
 
 let lista = [];
@@ -152,5 +153,18 @@ function pedirPreco() {
     return valor;
 }
 
+function excluiItemMarcado(){
+    lista = lista.filter(produto => produto.checked == false);
+    salvarLista();
+    mostrarLista();
+}
+
 btnAdd.addEventListener('click', adicionar);
 btnLimpar.addEventListener('click', limparLista);
+btnExcluiMarcado.addEventListener('click', excluiItemMarcado);
+
+inputItem.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      adicionar();
+    }
+  });
